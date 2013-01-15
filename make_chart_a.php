@@ -1,0 +1,40 @@
+<?php
+include("db_connect.php");
+$sql = "show databases";
+$result = mysql_query($sql);
+echo '<form action="" id="chartprofile" method="post" onsubmit="get_chart();return false;" >' . PHP_EOL;
+echo '<textarea id="sql_text" name="sql_text">Please enter your SQL text here in the form:	
+select xaxis, yaxis from database.tablename where [conditions]; </textarea>' . PHP_EOL;
+echo '<select name="yaxis_units">' . PHP_EOL;
+echo '<option value="DNS Unit">Please select the units for the Y Axis</option>' . PHP_EOL;
+echo '<option value="Numerical">Numerical</option>' . PHP_EOL;
+echo '<option value="Dollars">$</option>' . PHP_EOL;
+echo '</select>' . PHP_EOL;
+echo '<br />' . PHP_EOL;
+echo 'Chart Title: <input id="title" type="text" name="title" />' . PHP_EOL;
+echo '<br />' . PHP_EOL;
+echo '<select name="chart_type">' . PHP_EOL;
+echo '<option value="DNS Chart Type">Please select a chart type</option>' . PHP_EOL;
+echo '<option value="Bar">Bar Chart</option>' . PHP_EOL;
+echo '<option value="Line">Line Chart</option>' . PHP_EOL;
+echo '</select>' . PHP_EOL;
+echo '<br />' . PHP_EOL;
+echo '<select id="report" name="parent_report">' . PHP_EOL;
+echo '<option value="DNS Report">Please select a report to add this chart to</option>' . PHP_EOL;
+echo '<option value="Report1">Report 1</option>' . PHP_EOL;
+echo '<option value="Report2">Report 2</option>' . PHP_EOL;
+echo '</select>' . PHP_EOL;
+echo '<br />' . PHP_EOL;
+echo '<input type="hidden" name="database" value="Advanced">' . PHP_EOL;
+echo '<input type="hidden" name="table" value="Advanced">' . PHP_EOL;
+echo '<input type="hidden" name="xaxis" value="Advanced">' . PHP_EOL;
+echo '<input type="hidden" name="yaxis" value="Advanced">' . PHP_EOL;
+echo '<input type="hidden" name="yaxis_units" value="Advanced">' . PHP_EOL;
+echo '<input type="hidden" name="yaxis_function" value="Advanced">' . PHP_EOL;
+echo '<input type="Submit" id="submit" value="Submit">' . PHP_EOL;
+echo '</div>' . PHP_EOL;
+echo '</form>' . PHP_EOL;
+echo '<script type ="text/javascript">' . PHP_EOL;
+echo '$("#sql_text").autosize();' . PHP_EOL;
+echo '</script>' . PHP_EOL;
+?>
