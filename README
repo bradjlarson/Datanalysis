@@ -1,0 +1,7 @@
+#This is the readme for my Datanalysis project.
+#
+#The project is designed to make it easier to do
+#data driven analysis over time, as you can set a script,
+#come back X hours/days/months later and see your results. 
+#It also makes monitoring a breeze. Simply input your monitoring
+#script, set your limits, and you're good to go. 
