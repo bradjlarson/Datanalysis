@@ -1,7 +1,5 @@
-#This is the readme for my Datanalysis project.
-#
-#The project is designed to make it easier to do
-#data driven analysis over time, as you can set a script,
-#come back X hours/days/months later and see your results. 
-#It also makes monitoring a breeze. Simply input your monitoring
-#script, set your limits, and you're good to go. 
+Datanalysis project 
+
+This project never really got finished. I got it to the point where it was functional but not polished at all, and only the core functin worked. 
+
+The idea behind the project was to provide an interface to easily create and store SQL queries. Those SQL queries would be stored as SQL, along with a number of attributes that allowed me to represent that SQL in chart form. The chart's data is always up-to-date because the underlying object is a SQL query. 
